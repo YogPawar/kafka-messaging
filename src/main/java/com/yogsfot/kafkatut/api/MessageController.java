@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/kafka")
-public class MessageApi {
+public class MessageController {
 
   private KafkaProducer kafkaProducer;
 
   //here we are avoiding autowired annotation as we have only one parameterized constructor.
-  public MessageApi(KafkaProducer kafkaProducer) {
+  public MessageController(KafkaProducer kafkaProducer) {
     this.kafkaProducer = kafkaProducer;
   }
 
